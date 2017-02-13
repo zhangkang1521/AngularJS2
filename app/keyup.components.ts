@@ -10,15 +10,17 @@
 export class KeyUpComponent_v1 {
   values = '';
 
-  /*
+  /**/
   onKey(event:any) { // without type info
     this.values += event.target.value + ' | ';
+	//this.values += event.key + ' | ';
+	
   }
-  */
-
+  
+	/*
   onKey(event: KeyboardEvent) { // with type info
     this.values += (<HTMLInputElement>event.target).value + ' | ';
-  }
+  } */
 }
 
 //////////////////////////////////////////
@@ -33,7 +35,7 @@ export class KeyUpComponent_v1 {
 export class KeyUpComponent_v2 {
   values = '';
   onKey(value: string) {
-    this.values += value + ' | ';
+    this.values += value + ' | '; // 组件代码从视图中获得了干净的数据值。再也不用了解$event变量及其结构了。
   }
 }
 
