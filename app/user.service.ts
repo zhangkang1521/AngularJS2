@@ -12,7 +12,7 @@ let bob = new User('Bob', false);
 
 @Injectable()
 export class UserService {
-    user = bob;  // initial user is Bob
+    user = alice;  // initial user is Bob
 
     // swap users
     getNewUser() {

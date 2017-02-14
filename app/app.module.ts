@@ -8,6 +8,7 @@ import {Logger} from "./logger.service";
 import {BetterLogger} from "./betterLogger.service";
 import {EvenBetterLogger} from "./evenBetterLogger.service";
 import {UserService} from "./user.service";
+import {heroServiceProvider} from "./heroes/hero.service.provider";
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {UserService} from "./user.service";
   ],
   // 注册服务提供者，可以在整个应用中使用
   providers: [
-      HeroService,
+      //HeroService,
+      heroServiceProvider,
       UserService,
      { provide: Logger, useClass: EvenBetterLogger }
   ],
