@@ -29,6 +29,7 @@
     </form>
     <button type="button" class="btn btn-default" (click)="newHero();">new hero</button>
     </div>
+    <div [style.color]="submitted? 'red': 'green'">aa</div>
     <div [hidden]="!submitted">
         <h2>You submitted the following:</h2>
         <div class="row">
