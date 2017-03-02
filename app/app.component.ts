@@ -1,7 +1,16 @@
-import { Component } from '@angular/core';
+import {Component, ViewContainerRef} from '@angular/core';
+import {NgLayer} from "../ng2-layer";
 
 @Component({
   selector: 'my-app',
-  template: `<h1>Hello {{name}}</h1>`
+  template: `<button (click)="alert();">alert</button>`
 })
-export class AppComponent { name = 'Angular2,ss'; }
+export class AppComponent {
+  constructor(private ly:NgLayer, private vcRef:ViewContainerRef){
+
+  }
+
+  alert() {
+    alert('xx');
+  }
+}
